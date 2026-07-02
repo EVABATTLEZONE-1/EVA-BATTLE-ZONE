@@ -12,9 +12,11 @@ body{background:radial-gradient(circle at top,#330000,#000 70%);color:#fff;text-
 h1{font-size:48px;background:linear-gradient(90deg,#fff,#ffd700,#ff2b2b,#ffd700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:300%;animation:title 5s linear infinite}
 @keyframes title{to{background-position:300%}}
 .tag{margin:15px 0 30px;color:#ddd;font-size:20px}
-.wrap{display:inline-block;padding:3px;border-radius:18px;background:conic-gradient(gold,orange,red,gold);animation:spin 2s linear infinite}
+.wrap{position:relative;display:inline-block;padding:3px;border-radius:18px;overflow:hidden}
+.wrap::before{content:"";position:absolute;inset:-150%;background:conic-gradient(gold,orange,red,gold,yellow,gold);animation:spin 2s linear infinite}
+
 @keyframes spin{to{transform:rotate(360deg)}}
-.download{display:block;background:#111;color:#fff;text-decoration:none;padding:18px 45px;border-radius:15px;font-size:24px;font-weight:bold}
+.download{position:relative;display:block;background:#111;color:#fff;text-decoration:none;padding:18px 45px;border-radius:15px;font-size:24px;font-weight:bold;z-index:1}
 .telegram{display:inline-block;margin-top:18px;padding:14px 30px;text-decoration:none;color:#fff;border-radius:14px;background:linear-gradient(45deg,#ff0000,#ffd700,#ff0000);background-size:300%;animation:bg 4s linear infinite;box-shadow:0 0 18px red,0 0 30px gold}
 @keyframes bg{to{background-position:300%}}
 .card{margin-top:25px;background:#111;padding:25px;border:1px solid #7a4a00;border-radius:18px;box-shadow:0 0 12px rgba(255,0,0,.5)}
@@ -44,7 +46,7 @@ footer{margin:40px 0;color:#999}
 <div class="card"><h2>🎁 Huge Rewards</h2><p>Weekly Prize Pools & Bonus Events</p></div>
 <div class="card"><h2>🚀 24×7 Support</h2><p>Join our Telegram for instant support.</p></div>
 
-<footer>© 2026 EVA BATTLE ZONE. All Rights Reserved.</footer>
+<footer>© 2024 EVA BATTLE ZONE. All Rights Reserved.</footer>
 </div>
 </body>
 </html>
